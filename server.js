@@ -4,7 +4,7 @@ var ws = require('ws');
 var KurentoClient = require('./Kurento/KurentoClient');
 var fs = require('fs');
 
-const KURENTO_WS_URL = 'wss://' + location.hostname + ':8433/kurento';
+const KURENTO_WS_URL = 'wss://' + location.hostname + ':8888/kurento';
 
 //
 // Express
@@ -33,7 +33,7 @@ app.listen(3000, function(){
 // Web Socket
 // 
 var wss = ws.Server({
-     port: 8433,     
+     port: 8888,     
 });  
 
 wss.on('connection', function connect(newSocket, req){
